@@ -1,0 +1,17 @@
+---
+layout: layout.html
+title: Our Candles
+nav: catalog
+---
+
+<h2>Our Candles</h2>
+
+<ul class="product-list">
+  {% for candle in products %}
+    <li class="product">
+      <h3>{{ candle.name }}</h3>
+      <p>{{ candle.description }}</p>
+      <strong>{{ candle.price }}</strong>
+    </li>
+  {% endfor %}
+</ul>
