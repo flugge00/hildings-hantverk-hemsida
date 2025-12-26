@@ -398,8 +398,8 @@ body.modal-open {
   opacity: 0;
   transform: translateY(16px);
   transition:
-    opacity 0.45s ease,
-    transform 0.45s ease;
+    opacity 0.35s ease,
+    transform 0.35s ease;
   will-change: opacity, transform;
 }
 
