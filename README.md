@@ -13,3 +13,8 @@ sudo apt-get update
 sudo apt-install npm
 
 npm run start
+
+
+Bilder sparas i 1200 1600 format. Stående bilder för product bilder.
+Bra online tool för att resiza bilder:
+squoosh.app
