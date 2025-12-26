@@ -4,7 +4,7 @@ title: Our Candles
 nav: catalog 
 ---
 
-<h2>Our Candles</h2>
+<h2>Våra ljus</h2>
 
 <div class="product-grid">
   {% for candle in products %}
@@ -30,11 +30,15 @@ nav: catalog
 <div id="product-modal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close" onclick="closeModal()">×</span>
-    <img id="modal-image" />
-    <h3 id="modal-name"></h3>
-    <p id="modal-price" class="price"></p>
-    <p id="modal-description"></p>
+    <div class="modal-inner">
+      <img id="modal-image" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-price" class="price"></p>
+      <p id="modal-description"></p>
+      <p id="modal-long-description"></p>
+    </div>
   </div>
 </div>
+
 
 <script src="../assets/js/product-modal.js"></script>

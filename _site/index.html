@@ -78,21 +78,21 @@
 
   <main class="content">
     
-<h2>Our Candles</h2>
+<h2>Våra ljus</h2>
 
 <div class="product-grid">
   
     <div
       class="product-card"
       onclick="openModal(
-        '',
+        'images/testBild1.jpg',
         'Lavender Soy Candle',
         '18kr',
         'Relaxing lavender scent, hand-poured using natural soy wax.',
-        ''
+        ' THIS IS A LONG DESCRIPTION  '
       )"
     >
-      <img src="" alt="Lavender Soy Candle">
+      <img src="images/testBild1.jpg" alt="Lavender Soy Candle">
       <h3>Lavender Soy Candle</h3>
       <p class="price">18kr</p>
       <p class="short-desc">Relaxing lavender scent, hand-poured using natural soy wax.</p>
@@ -101,14 +101,46 @@
     <div
       class="product-card"
       onclick="openModal(
-        '',
+        'images/testBild2.jpg',
+        'Vanilla & Amber Candle',
+        '10kr',
+        'Warm vanilla blended with soft amber notes.',
+        ''
+      )"
+    >
+      <img src="images/testBild2.jpg" alt="Vanilla & Amber Candle">
+      <h3>Vanilla & Amber Candle</h3>
+      <p class="price">10kr</p>
+      <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
+    </div>
+  
+    <div
+      class="product-card"
+      onclick="openModal(
+        'images/testBild3.jpg',
+        'Amber Candle',
+        '40kr',
+        'Warm vanilla blended with soft amber notes.',
+        ''
+      )"
+    >
+      <img src="images/testBild3.jpg" alt="Amber Candle">
+      <h3>Amber Candle</h3>
+      <p class="price">40kr</p>
+      <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
+    </div>
+  
+    <div
+      class="product-card"
+      onclick="openModal(
+        'images/testBild1.jpg',
         'Vanilla & Amber Candle',
         '20kr',
         'Warm vanilla blended with soft amber notes.',
         ''
       )"
     >
-      <img src="" alt="Vanilla & Amber Candle">
+      <img src="images/testBild1.jpg" alt="Vanilla & Amber Candle">
       <h3>Vanilla & Amber Candle</h3>
       <p class="price">20kr</p>
       <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
@@ -117,14 +149,14 @@
     <div
       class="product-card"
       onclick="openModal(
-        '',
+        'images/testBild1.jpg',
         'Vanilla & Amber Candle',
         '20kr',
         'Warm vanilla blended with soft amber notes.',
         ''
       )"
     >
-      <img src="" alt="Vanilla & Amber Candle">
+      <img src="images/testBild1.jpg" alt="Vanilla & Amber Candle">
       <h3>Vanilla & Amber Candle</h3>
       <p class="price">20kr</p>
       <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
@@ -133,46 +165,14 @@
     <div
       class="product-card"
       onclick="openModal(
-        '',
+        'images/testBild1.jpg',
         'Vanilla & Amber Candle',
         '20kr',
         'Warm vanilla blended with soft amber notes.',
         ''
       )"
     >
-      <img src="" alt="Vanilla & Amber Candle">
-      <h3>Vanilla & Amber Candle</h3>
-      <p class="price">20kr</p>
-      <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
-    </div>
-  
-    <div
-      class="product-card"
-      onclick="openModal(
-        '',
-        'Vanilla & Amber Candle',
-        '20kr',
-        'Warm vanilla blended with soft amber notes.',
-        ''
-      )"
-    >
-      <img src="" alt="Vanilla & Amber Candle">
-      <h3>Vanilla & Amber Candle</h3>
-      <p class="price">20kr</p>
-      <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
-    </div>
-  
-    <div
-      class="product-card"
-      onclick="openModal(
-        '',
-        'Vanilla & Amber Candle',
-        '20kr',
-        'Warm vanilla blended with soft amber notes.',
-        ''
-      )"
-    >
-      <img src="" alt="Vanilla & Amber Candle">
+      <img src="images/testBild1.jpg" alt="Vanilla & Amber Candle">
       <h3>Vanilla & Amber Candle</h3>
       <p class="price">20kr</p>
       <p class="short-desc">Warm vanilla blended with soft amber notes.</p>
@@ -184,12 +184,16 @@
 <div id="product-modal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close" onclick="closeModal()">×</span>
-    <img id="modal-image" />
-    <h3 id="modal-name"></h3>
-    <p id="modal-price" class="price"></p>
-    <p id="modal-description"></p>
+    <div class="modal-inner">
+      <img id="modal-image" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-price" class="price"></p>
+      <p id="modal-description"></p>
+      <p id="modal-long-description"></p>
+    </div>
   </div>
 </div>
+
 
 <script src="../assets/js/product-modal.js"></script>
 

@@ -2,31 +2,38 @@
   {
     "name": "Lavender Soy Candle",
     "price": "18kr",
-    "description": "Relaxing lavender scent, hand-poured using natural soy wax."
+    "description": "Relaxing lavender scent, hand-poured using natural soy wax.",
+    "long_description": " THIS IS A LONG DESCRIPTION  ",
+    "image": "images/testBild1.jpg"
   },
   {
     "name": "Vanilla & Amber Candle",
-    "price": "20kr",
-    "description": "Warm vanilla blended with soft amber notes."
+    "price": "10kr",
+    "description": "Warm vanilla blended with soft amber notes.",
+    "image": "images/testBild2.jpg"
+  },
+    {
+    "name": "Amber Candle",
+    "price": "40kr",
+    "description": "Warm vanilla blended with soft amber notes.",
+    "image": "images/testBild3.jpg"
   },
     {
     "name": "Vanilla & Amber Candle",
     "price": "20kr",
-    "description": "Warm vanilla blended with soft amber notes."
+    "description": "Warm vanilla blended with soft amber notes.",
+    "image": "images/testBild1.jpg"
   },
     {
     "name": "Vanilla & Amber Candle",
     "price": "20kr",
-    "description": "Warm vanilla blended with soft amber notes."
+    "description": "Warm vanilla blended with soft amber notes.",
+    "image": "images/testBild1.jpg"
   },
     {
     "name": "Vanilla & Amber Candle",
     "price": "20kr",
-    "description": "Warm vanilla blended with soft amber notes."
-  },
-    {
-    "name": "Vanilla & Amber Candle",
-    "price": "20kr",
-    "description": "Warm vanilla blended with soft amber notes."
+    "description": "Warm vanilla blended with soft amber notes.",
+    "image": "images/testBild1.jpg"
   }
 ]
