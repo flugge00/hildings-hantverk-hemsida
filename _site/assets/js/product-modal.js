@@ -12,6 +12,7 @@ window.closeModal = function () {
   document.getElementById("product-modal").classList.remove("is-open");
 };
 
+// Wait for catalog to load 
 document.addEventListener("DOMContentLoaded", async () => {
   const catalog = document.getElementById("catalog");
   const loading = document.getElementById("catalog-loading");
@@ -46,4 +47,32 @@ document.addEventListener("DOMContentLoaded", async () => {
   loading.style.display = "none";
   catalog.classList.remove("is-hidden");
   catalog.classList.add("is-ready");
+});
+
+// Fade in new card
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".product-card");
+
+  if (!("IntersectionObserver" in window)) {
+    // Fallback: show everything
+    cards.forEach(card => card.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -60px 0px"
+    }
+  );
+
+  cards.forEach(card => observer.observe(card));
 });

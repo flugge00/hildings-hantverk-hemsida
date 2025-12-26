@@ -393,6 +393,31 @@ body.modal-open {
   100% { opacity: 0.3; }
 }
 
+/* Scroll reveal initial state */
+.product-card {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+  will-change: opacity, transform;
+}
+
+/* Revealed state */
+.product-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .product-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 
 /* ---------- Gallery ---------- */
 
