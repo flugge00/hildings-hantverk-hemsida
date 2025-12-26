@@ -177,6 +177,126 @@ main.content {
   font-weight: 600;
 }
 
+/* Page background */
+body {
+  background-color: #f4f1ee;
+}
+
+/* Grid layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Card */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.short-desc {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+/* Modal backdrop */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Modal visible state */
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal card */
+.modal-content {
+  background: white;
+  max-width: 500px;
+  width: 90%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+
+  transform: translateY(12px) scale(0.96);
+  opacity: 0;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Animate card in */
+.modal.is-open .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .modal-content {
+    transition: none;
+  }
+}
+
 /* ---------- Gallery ---------- */
 
 .gallery {
