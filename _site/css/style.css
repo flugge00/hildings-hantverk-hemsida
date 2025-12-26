@@ -351,6 +351,49 @@ body.modal-open {
   }
 }
 
+/* Hidden until ready */
+.is-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+/* Revealed grid */
+#catalog.is-ready {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* Loading indicator */
+.catalog-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Optional subtle animation */
+.catalog-loading::after {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ddd, #bbb, #ddd);
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+
 /* ---------- Gallery ---------- */
 
 .gallery {

@@ -6,7 +6,11 @@ nav: catalog
 
 <h2>Våra ljus</h2>
 
-<div class="product-grid">
+<div id="catalog-loading" class="catalog-loading">
+  Laddar ljus…
+</div>
+
+<div id="catalog" class="product-grid is-hidden">
   {% for candle in products %}
     <div
       class="product-card"
@@ -18,13 +22,19 @@ nav: catalog
         '{{ candle.long_description }}'
       )"
     >
-      <img src="{{ candle.image }}" alt="{{ candle.name }}">
+      <img
+        src="{{ candle.image }}"
+        alt="{{ candle.name }}"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>{{ candle.name }}</h3>
       <p class="price">{{ candle.price }}</p>
       <p class="short-desc">{{ candle.description }}</p>
     </div>
   {% endfor %}
 </div>
+
 
 <!-- Modal -->
 <div id="product-modal" class="modal" onclick="closeModal()">

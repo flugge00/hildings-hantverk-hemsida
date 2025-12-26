@@ -80,7 +80,11 @@
     
 <h2>Våra ljus</h2>
 
-<div class="product-grid">
+<div id="catalog-loading" class="catalog-loading">
+  Laddar ljus…
+</div>
+
+<div id="catalog" class="product-grid is-hidden">
   
     <div
       class="product-card"
@@ -92,7 +96,12 @@
         'Hög femma krona, 100 cm hög osv'
       )"
     >
-      <img src="images/5hogProduct.jpeg" alt="Hög Femma vit">
+      <img
+        src="images/5hogProduct.jpeg"
+        alt="Hög Femma vit"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Hög Femma vit</h3>
       <p class="price">325kr</p>
       <p class="short-desc">Hög femma krona</p>
@@ -108,7 +117,12 @@
         ''
       )"
     >
-      <img src="images/4gronProduct.jpeg" alt="Fyra grön">
+      <img
+        src="images/4gronProduct.jpeg"
+        alt="Fyra grön"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Fyra grön</h3>
       <p class="price">250kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -124,7 +138,12 @@
         ''
       )"
     >
-      <img src="images/5lagProduct.jpeg" alt="Låg Femma vit">
+      <img
+        src="images/5lagProduct.jpeg"
+        alt="Låg Femma vit"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Låg Femma vit</h3>
       <p class="price">325kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -140,7 +159,12 @@
         ''
       )"
     >
-      <img src="images/6gronProduct.jpeg" alt="Sexa grön">
+      <img
+        src="images/6gronProduct.jpeg"
+        alt="Sexa grön"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Sexa grön</h3>
       <p class="price">500kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -156,7 +180,12 @@
         ''
       )"
     >
-      <img src="images/sockertopparProduct.jpeg" alt="Sockertoppar">
+      <img
+        src="images/sockertopparProduct.jpeg"
+        alt="Sockertoppar"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Sockertoppar</h3>
       <p class="price">150kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -172,7 +201,12 @@
         ''
       )"
     >
-      <img src="images/sicksack4hogProduct.jpeg" alt="Hög Fyra SickSack">
+      <img
+        src="images/sicksack4hogProduct.jpeg"
+        alt="Hög Fyra SickSack"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Hög Fyra SickSack</h3>
       <p class="price">300kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -188,7 +222,12 @@
         ''
       )"
     >
-      <img src="images/sicksack4Product.jpeg" alt="Låg Fyra SickSack">
+      <img
+        src="images/sicksack4Product.jpeg"
+        alt="Låg Fyra SickSack"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Låg Fyra SickSack</h3>
       <p class="price">300kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -204,7 +243,12 @@
         ''
       )"
     >
-      <img src="images/sicksack5Product.jpeg" alt="Hög Femma SickSack">
+      <img
+        src="images/sicksack5Product.jpeg"
+        alt="Hög Femma SickSack"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Hög Femma SickSack</h3>
       <p class="price">450kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -220,7 +264,12 @@
         ''
       )"
     >
-      <img src="images/snobollarProduct.jpeg" alt="Snöbollar">
+      <img
+        src="images/snobollarProduct.jpeg"
+        alt="Snöbollar"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Snöbollar</h3>
       <p class="price">60kr</p>
       <p class="short-desc">Kort beskrivning</p>
@@ -236,13 +285,19 @@
         ''
       )"
     >
-      <img src="images/spirorProduct.jpeg" alt="Spiror">
+      <img
+        src="images/spirorProduct.jpeg"
+        alt="Spiror"
+        loading="lazy"
+        decoding="async"
+      >
       <h3>Spiror</h3>
       <p class="price">120kr</p>
       <p class="short-desc">Kort beskrivning</p>
     </div>
   
 </div>
+
 
 <!-- Modal -->
 <div id="product-modal" class="modal" onclick="closeModal()">
