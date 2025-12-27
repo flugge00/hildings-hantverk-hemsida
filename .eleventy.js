@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
       output: "_site"
     },
     pathPrefix: process.env.ELEVENTY_ENV === "production"
-      ? "/REPO/"
+      ? "/hildings-hantverk-hemsida/"
       : "/"
   };
 };
