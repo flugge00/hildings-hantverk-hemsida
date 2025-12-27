@@ -5,9 +5,21 @@ nav: gallery
 permalink: /gallery/
 ---
 
-<h2>Gallery</h2>
-
-<div class="gallery">
-  <img src="/images/gallery1.jpg" alt="Candle in glass jar">
-  <img src="/images/gallery2.jpg" alt="Candle workshop">
+<div id="gallery-loading" class="gallery-loading">
+  Laddar bilder…
 </div>
+
+<div id="gallery" class="gallery-grid is-hidden">
+  {% for item in gallery %}
+    <div class="gallery-item size-{{ item.size }}">
+      <img
+        src="{{ item.image }}"
+        alt="{{ item.alt }}"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
+  {% endfor %}
+</div>
+
+<script src="../assets/js/product-modal.js"></script>

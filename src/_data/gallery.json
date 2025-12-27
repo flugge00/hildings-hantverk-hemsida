@@ -1,0 +1,37 @@
+[
+  {
+    "size": "large",
+    "image": "/images/gallery/ekenasBigMolly.jpg",
+    "alt": "Could not load image"
+  },
+  {
+    "size": "small",
+    "image": "/images/gallery/ekenasApples.jpg",
+    "alt": "Could not load image"
+  },
+  {
+    "size": "medium",
+    "image": "/images/gallery/ekenasCollection.jpg",
+    "alt": "Could not load image"
+  },
+  {
+    "size": "medium",
+    "image": "/images/gallery/ekenasCollectionSmall.jpg",
+    "alt": "Could not load image"
+  },
+  {
+    "size": "large",
+    "image": "/images/gallery/vadstenaCollectionMolly.jpg",
+    "alt": "Could not load image"
+  },
+    {
+    "size": "medium",
+    "image": "/images/gallery/rodFemma.jpg",
+    "alt": "Could not load image"
+  },
+    {
+    "size": "medium",
+    "image": "/images/gallery/vadstenaFonster.jpg",
+    "alt": "Could not load image"
+  }
+]

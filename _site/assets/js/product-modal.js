@@ -77,15 +77,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
           card.classList.add("is-visible");
         } else {
-          card.classList.remove("is-visible", "from-top", "from-bottom");
+          //card.classList.remove("is-visible", "from-top", "from-bottom");
+          card.classList.remove("from-top", "from-bottom");
         }
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: "-50px 0px -50px 0px"
+      threshold: 0.05,
+      rootMargin: "100px 0px -100px 0px"
     }
   );
 
   cards.forEach(card => observer.observe(card));
+});
+
+// Loading event for gallery
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("Gallary load js")
+  const gallery = document.getElementById("gallery");
+  const loading = document.getElementById("gallery-loading");
+
+  if (!gallery || !loading) return;
+
+  const items = gallery.querySelectorAll(".gallery-item");
+  const images = gallery.querySelectorAll("img");
+
+  /* ---------- Initial load (same as catalog) ---------- */
+
+  const decodePromises = [];
+
+  images.forEach(img => {
+    if (img.complete) {
+      decodePromises.push(img.decode().catch(() => {}));
+    } else {
+      decodePromises.push(
+        new Promise(resolve => {
+          img.addEventListener("load", () => {
+            img.decode().catch(() => {}).finally(resolve);
+          });
+          img.addEventListener("error", resolve);
+        })
+      );
+    }
+  });
+
+  await Promise.race([
+    Promise.all(decodePromises),
+    new Promise(resolve => setTimeout(resolve, 800))
+  ]);
+
+  loading.style.display = "none";
+  gallery.classList.remove("is-hidden");
+  console.log("Is hidden is removed")
+
+  /* ---------- Scroll animation (separate concern) ---------- */
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle(
+          "is-visible",
+          entry.isIntersecting
+        );
+      });
+    },
+    {
+      rootMargin: "100px 0px -100px 0px",
+      threshold: 0.05
+    }
+  );
+
+  items.forEach(item => observer.observe(item));
 });

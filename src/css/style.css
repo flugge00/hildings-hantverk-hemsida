@@ -154,9 +154,8 @@ body {
 
 main.content {
   flex: 1 0 auto;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  margin: 0 1rem;
+  padding: 2.5rem 1rem;
 }
 
 /* ---------- Product Catalog ---------- */
@@ -430,17 +429,154 @@ body.modal-open {
 
 /* ---------- Gallery ---------- */
 
-.gallery {
+/* Gallery grid */
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-auto-rows: 8px; /* key for masonry */
   gap: 1rem;
+  opacity: 1;
+} 
+
+
+/* Base item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee;
+
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
-.gallery img {
-  width: 100%;
-  display: block;
-  border-radius: 6px;
+/* Visible state */
+.gallery-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Size variants (controls height) */
+.size-small {
+  grid-row: span 10;
+}
+
+.size-medium {
+  grid-row: span 20;
+}
+
+.size-large {
+  grid-row: span 30;
+}
+
+/* Loading state */
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #777;
+}
+
+/* Optional subtle animation */
+.gallery-loading::after {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ddd, #bbb, #ddd);
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* ---------- Contact Page ---------- */
+
+.contact {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Image */
+.contact-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Names split */
+.contact-names {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-person h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.contact-person p {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Description */
+.contact-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-description p {
+  margin-bottom: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contact-names {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+  }
+}
+
+
 
 /* ---------- Footer ---------- */
 
