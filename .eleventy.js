@@ -7,6 +7,9 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "_site"
-    }
+    },
+    pathPrefix: process.env.ELEVENTY_ENV === "production"
+      ? "/REPO/"
+      : "/"
   };
 };
