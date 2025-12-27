@@ -396,20 +396,28 @@ body.modal-open {
 /* Scroll reveal initial state */
 .product-card {
   opacity: 0;
-  transform: translateY(16px);
   transition:
     opacity 0.35s ease,
     transform 0.35s ease;
   will-change: opacity, transform;
 }
 
-/* Revealed state */
+/* Entering from bottom (scrolling down) */
+.product-card.from-bottom {
+  transform: translateY(16px);
+}
+
+/* Entering from top (scrolling up) */
+.product-card.from-top {
+  transform: translateY(-16px);
+}
+
+/* Visible state */
 .product-card.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .product-card {
     opacity: 1;
@@ -417,6 +425,7 @@ body.modal-open {
     transition: none;
   }
 }
+
 
 
 /* ---------- Gallery ---------- */

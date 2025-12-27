@@ -61,16 +61,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
+        const card = entry.target;
+
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          // Determine direction
+          const isFromTop = entry.boundingClientRect.top < 0;
+
+          card.classList.remove("from-top", "from-bottom");
+
+          if (isFromTop) {
+            card.classList.add("from-top");
+          } else {
+            card.classList.add("from-bottom");
+          }
+
+          card.classList.add("is-visible");
         } else {
-          entry.target.classList.remove("is-visible");
+          card.classList.remove("is-visible", "from-top", "from-bottom");
         }
       });
     },
     {
       threshold: 0.1,
-      rootMargin: "0px 0px -80px 0px"
+      rootMargin: "-50px 0px -50px 0px"
     }
   );
 
