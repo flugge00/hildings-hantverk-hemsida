@@ -1,18 +1,57 @@
+// -------------- Modal handling -----------------
+let scrollY = 0;
+
 window.openModal = function (image, name, price, shortDesc, longDesc) {
+  const modal = document.getElementById("product-modal");
+  const modalInner = modal.querySelector(".modal-inner");
+  const body = document.getElementById("main-body");
+
+  scrollY = window.scrollY;
+
+  // Lock body scroll without jumping
+  document.body.style.top = `-${scrollY}px`;
+  document.body.classList.add("modal-open");
+
+  // Set content
   document.getElementById("modal-image").src = image;
   document.getElementById("modal-name").textContent = name;
   document.getElementById("modal-price").textContent = price;
   document.getElementById("modal-description").textContent = shortDesc;
   document.getElementById("modal-long-description").textContent = longDesc;
 
-  document.getElementById("product-modal").classList.add("is-open");
+  // Show modal
+  modal.classList.add("is-open");
+
+  // Stop scroll on body
+  body.classList.add("modal-open");
+
+  // Wait for next tick to ensure it's rendered, then reset scroll
+  requestAnimationFrame(() => {
+    modalInner.scrollTop = 0;
+  });
 };
 
 window.closeModal = function () {
+  document.body.classList.remove("modal-open");
+
+  // Restore scroll position
+  document.body.style.top = "";
+  window.scrollTo(0, scrollY);
+
   document.getElementById("product-modal").classList.remove("is-open");
+  document.getElementById("main-body").classList.remove("modal-open");
 };
 
-// Wait for catalog to load 
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    const modal = document.getElementById("product-modal");
+    if (modal && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  }
+});
+
+// -----------  Wait for catalog to load -------------
 document.addEventListener("DOMContentLoaded", async () => {
   const catalog = document.getElementById("catalog");
   const loading = document.getElementById("catalog-loading");
@@ -91,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach(card => observer.observe(card));
 });
 
-// Loading event for gallery
+// ---------------- Loading event for gallery ----------
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("Gallary load js")
   const gallery = document.getElementById("gallery");
@@ -102,7 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const items = gallery.querySelectorAll(".gallery-item");
   const images = gallery.querySelectorAll("img");
 
-  /* ---------- Initial load (same as catalog) ---------- */
+  /* Initial load (same as catalog)*/
 
   const decodePromises = [];
 
@@ -130,7 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   gallery.classList.remove("is-hidden");
   console.log("Is hidden is removed")
 
-  /* ---------- Scroll animation (separate concern) ---------- */
+  /* Scroll animation (separate concern) */
 
   const observer = new IntersectionObserver(
     entries => {

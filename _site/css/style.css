@@ -258,6 +258,7 @@ body {
   position: relative;
 
   overflow: hidden; /* scroll handled by inner wrapper */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   max-height: calc(100vh - 4rem);
 
   transform: translateY(12px) scale(0.96);
@@ -283,7 +284,9 @@ body {
 
 /* Prevent background scroll when modal open */
 body.modal-open {
+  position: fixed;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Modal image */
@@ -438,6 +441,12 @@ body.modal-open {
   gap: 1rem;
   opacity: 1;
 } 
+
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
 
 
 /* Base item */
