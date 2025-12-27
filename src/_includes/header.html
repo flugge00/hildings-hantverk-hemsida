@@ -29,10 +29,11 @@
   </h1>
 
     <nav class="site-nav">
-    <a href="/" class="{% if nav == 'catalog' %}active{% endif %}">Katalog</a>
-    <a href="/gallery/" class="{% if nav == 'gallery' %}active{% endif %}">Bilder</a>
-    <a href="/contact/" class="{% if nav == 'contact' %}active{% endif %}">Kontakt</a>
-    </nav>
+      <a href="{{ '/' | url }}" class="{% if nav == 'catalog' %}active{% endif %}">Katalog</a>
+      <a href="{{ '/gallery/' | url }}" class="{% if nav == 'gallery' %}active{% endif %}">Bilder</a>
+      <a href="{{ '/contact/' | url }}" class="{% if nav == 'contact' %}active{% endif %}">Kontakt</a>
+  </nav>
+
 
 <svg class="header-border" width="100%" height="30" viewBox="0 0 1000 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <!-- Background -->
