@@ -4,60 +4,60 @@
     "price": "325kr",
     "description": "Hög femma krona",
     "long_description": "Hög femma krona, 100 cm hög osv",
-    "image": "images/5hogProduct.jpeg"
+    "image": "images/5hogProduct.jpg"
   },
   {
     "name": "Fyra grön",
     "price": "250kr",
     "description": "Kort beskrivning",
-    "image": "images/4gronProduct.jpeg"
+    "image": "images/4gronProduct.jpg"
   },
     {
     "name": "Låg Femma vit",
     "price": "325kr",
     "description": "Kort beskrivning",
-    "image": "images/5lagProduct.jpeg"
+    "image": "images/5lagProduct.jpg"
   },
     {
     "name": "Sexa grön",
     "price": "500kr",
     "description": "Kort beskrivning",
-    "image": "images/6gronProduct.jpeg"
+    "image": "images/6gronProduct.jpg"
   },
     {
     "name": "Sockertoppar",
     "price": "150kr",
     "description": "Kort beskrivning",
-    "image": "images/sockertopparProduct.jpeg"
+    "image": "images/sockertopparProduct.jpg"
   },
       {
     "name": "Hög Fyra SickSack",
     "price": "300kr",
     "description": "Kort beskrivning",
-    "image": "images/sicksack4hogProduct.jpeg"
+    "image": "images/sicksack4hogProduct.jpg"
   },
       {
     "name": "Låg Fyra SickSack",
     "price": "300kr",
     "description": "Kort beskrivning",
-    "image": "images/sicksack4Product.jpeg"
+    "image": "images/sicksack4Product.jpg"
   },
         {
     "name": "Hög Femma SickSack",
     "price": "450kr",
     "description": "Kort beskrivning",
-    "image": "images/sicksack5Product.jpeg"
+    "image": "images/sicksack5Product.jpg"
   },
         {
     "name": "Snöbollar",
     "price": "60kr",
     "description": "Kort beskrivning",
-    "image": "images/snobollarProduct.jpeg"
+    "image": "images/snobollarProduct.jpg"
   },
         {
     "name": "Spiror",
     "price": "120kr",
     "description": "Kort beskrivning",
-    "image": "images/spirorProduct.jpeg"
+    "image": "images/spirorProduct.jpg"
   }
 ]
