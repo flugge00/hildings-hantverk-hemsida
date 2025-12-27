@@ -1,37 +1,37 @@
 [
   {
     "size": "large",
-    "image": "/images/gallery/ekenasBigMolly.jpg",
+    "image": "images/gallery/ekenasBigMolly.jpg",
     "alt": "Could not load image"
   },
   {
     "size": "small",
-    "image": "/images/gallery/ekenasApples.jpg",
+    "image": "images/gallery/ekenasApples.jpg",
     "alt": "Could not load image"
   },
   {
     "size": "medium",
-    "image": "/images/gallery/ekenasCollection.jpg",
+    "image": "images/gallery/ekenasCollection.jpg",
     "alt": "Could not load image"
   },
   {
     "size": "medium",
-    "image": "/images/gallery/ekenasCollectionSmall.jpg",
+    "image": "images/gallery/ekenasCollectionSmall.jpg",
     "alt": "Could not load image"
   },
   {
     "size": "large",
-    "image": "/images/gallery/vadstenaCollectionMolly.jpg",
+    "image": "images/gallery/vadstenaCollectionMolly.jpg",
     "alt": "Could not load image"
   },
     {
     "size": "medium",
-    "image": "/images/gallery/rodFemma.jpg",
+    "image": "images/gallery/rodFemma.jpg",
     "alt": "Could not load image"
   },
     {
     "size": "medium",
-    "image": "/images/gallery/vadstenaFonster.jpg",
+    "image": "images/gallery/vadstenaFonster.jpg",
     "alt": "Could not load image"
   }
 ]
