@@ -592,10 +592,43 @@ body.modal-open {
 .site-footer {
   margin-top: auto;
   text-align: center;
-  padding: 1.5rem 1rem;
+  margin: 1.5rem 1rem;
   font-size: 0.85rem;
   background: #f6f2ed;
   color: #555;
+}
+
+.site-footer p {
+  margin: 0 0;
+  color: #555;
+}
+
+.footer-contact {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #555;       /* dark text instead of blue */
+  text-decoration: none;  /* remove underline */
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #000;            /* slightly darker on hover */
+}
+
+.footer-link .icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 /* ---------- Headings ---------- */

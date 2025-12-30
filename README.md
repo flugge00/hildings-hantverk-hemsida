@@ -40,7 +40,7 @@ src/_data/products.json
 
 Each product looks like this:
 
-{
+{   
   "name": "Product name",
   "price": "350 kr",
   "image": "/images/example.jpg",
