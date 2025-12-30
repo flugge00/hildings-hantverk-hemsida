@@ -1,5 +1,5 @@
 # HILDINGS HANTVERK – Hemsida
-===========================
+-----------------------------------------------
 
 This website is built so that non-developers can easily update content like
 products and gallery images without touching any code.
@@ -8,9 +8,12 @@ You mainly work with TWO files:
 - products.json
 - gallery.json
 
+
 No programming knowledge is required for normal updates.
 
+--------------------------------------------------
 ### For developing, see README file under src/
+--------------------------------------------------
 
 --------------------------------------------------
 ## QUICK START (NON-DEVELOPER FRIENDLY)
